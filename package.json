@@ -10,6 +10,8 @@
     "build": "parcel build public/index.html"
   },
   "devDependencies": {
+    "buffer": "^6.0.3",
+    "crypto-js": "^4.2.0",
     "parcel": "^2.15.4"
   },
   "dependencies": {
