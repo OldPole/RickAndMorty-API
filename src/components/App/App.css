@@ -2,6 +2,11 @@
 :root {
     --color-blue: #3199dc;
     --color-dark: #222222;
+    --color-light: #f8f9fa;
+
+    --spacing-small: 10px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
 }
 
 /* general styles */
@@ -13,7 +18,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--color-dark);
-    height: 200vh;
+    line-height: 1.7;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* scrollbars */

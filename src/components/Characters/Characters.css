@@ -1,0 +1,30 @@
+.characters__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-large);
+    width: 90%;
+    margin: 20px auto;
+    padding: 0;
+}
+.characters__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.5s;
+    width: 250px;
+    background-color: var(--color-light);
+    cursor: pointer;
+}
+.characters__item:hover {
+    transform: rotate(-3deg) scale(0.95);
+    filter: saturate(150%);
+}
+.characters__name {
+    display: flex;
+    margin: auto;
+    padding: var(--spacing-small) var(--spacing-medium);
+}
+.characters__img {
+    width: 100%;
+}
