@@ -1,0 +1,36 @@
+/* css vars */
+:root {
+    --color-blue: #3199dc;
+    --color-dark: #222222;
+}
+
+/* general styles */
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-dark);
+    height: 200vh;
+}
+
+/* scrollbars */
+* {
+    scrollbar-color: var(--color-blue) var(--color-dark);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-blue);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-dark);
+}
