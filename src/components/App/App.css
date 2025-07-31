@@ -40,3 +40,21 @@ body {
 ::-webkit-scrollbar-track {
     background-color: var(--color-dark);
 }
+
+/* global classes */
+.btn {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.img-contain {
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}
+.img-cover {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}

@@ -2,7 +2,7 @@ import { API_URL, URL_CHARACTER } from "../../constants/api";
 import { getDataApi } from "../../utils/getDataApi";
 import { ROOT_INDEX } from "../../constants/root";
 
-import './Characters.css'
+import classes from './Characters.module.css'
 
 class Charecters {
 
@@ -12,21 +12,32 @@ class Charecters {
         let htmlContent = '';
 
         data.forEach(({ id, name, image }) => {
+            const uri = API_URL + URL_CHARACTER + '/' + id;
+
             htmlContent += `
-                <li class="characters__item">
-                    <span class="characters__name">${name}</span>
-                    <img class="characters__img" src=${image}></img>
+                <li class="characters__item ${classes.characters__item}" data-uri="${uri}">
+                    <span class="${classes.characters__name}">${name}</span>
+                    <img class="img-contain ${classes.characters__img}" src=${image}></img>
                 </li>
             `;
         });
 
         const htmlWrapper = `
-            <ul class="characters__container">
+            <ul class="${classes.characters__container}">
                 ${htmlContent}
             </ul>
         `;
 
         ROOT_INDEX.innerHTML = htmlWrapper;
+    }
+
+    eventListener () {
+        document.querySelectorAll('.characters__item').forEach(element => {
+            const uri = element.getAttribute('data-uri');
+            element.addEventListener('click', () => {
+                console.log(uri);
+            })
+        });
     }
 }
 

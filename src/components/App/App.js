@@ -5,6 +5,7 @@ import './App.css'
 class App {
     async render () {
         await Characters.render();
+        Characters.eventListener();
     }
 }
 
