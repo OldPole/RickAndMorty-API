@@ -4,11 +4,10 @@ import { ROOT_INDEX } from "../../constants/root";
 
 import classes from './Characters.module.css'
 
+import Error from "../Error";
+
 class Charecters {
-
-    async render () {
-        const data = await getDataApi.getData(API_URL + URL_CHARACTER);
-
+    renderCharacters (data) {
         let htmlContent = '';
 
         data.forEach(({ id, name, image }) => {
@@ -29,6 +28,12 @@ class Charecters {
         `;
 
         ROOT_INDEX.innerHTML = htmlWrapper;
+    }
+
+    async render () {
+        const data = await getDataApi.getData(API_URL + URL_CHARACTER);
+
+        data ? this.renderCharacters(data) : Error.render();
     }
 
     eventListener () {
