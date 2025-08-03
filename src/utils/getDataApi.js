@@ -5,7 +5,7 @@ class GetDataApi {
   async getData (url) {
     try {
       const response = await axios.get(url);
-      return response.data.results;
+      return response.data.results ? response.data.results : response.data;
     } catch (error) {
       console.log(error.message);
       return false;

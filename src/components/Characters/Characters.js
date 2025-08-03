@@ -4,6 +4,7 @@ import { ROOT_INDEX } from "../../constants/root";
 
 import classes from './Characters.module.css'
 
+import CharacterModal from "../CharacterModal/CharacterModal";
 import Error from "../Error";
 
 class Charecters {
@@ -40,7 +41,7 @@ class Charecters {
         document.querySelectorAll('.characters__item').forEach(element => {
             const uri = element.getAttribute('data-uri');
             element.addEventListener('click', () => {
-                console.log(uri);
+                CharacterModal.render(uri);
             })
         });
     }
