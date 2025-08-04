@@ -2,7 +2,7 @@ import { API_URL, URL_CHARACTER } from "../../constants/api";
 import { getDataApi } from "../../utils/getDataApi";
 import { ROOT_INDEX } from "../../constants/root";
 
-import classes from './Characters.module.css'
+import classes from './Characters.module.css';
 
 import CharacterModal from "../CharacterModal/CharacterModal";
 import Error from "../Error";

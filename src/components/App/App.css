@@ -60,3 +60,8 @@ body {
     object-fit: cover;
     object-position: center;
 }
+.bg-contain {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
