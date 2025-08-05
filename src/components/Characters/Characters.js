@@ -31,8 +31,8 @@ class Charecters {
         ROOT_INDEX.innerHTML = htmlWrapper;
     }
 
-    async render () {
-        const data = await getDataApi.getData(API_URL + URL_CHARACTER);
+    async render (page) {
+        const data = await getDataApi.getData(API_URL + URL_CHARACTER + '?page=' + page);
 
         data ? this.renderCharacters(data) : Error.render();
     }

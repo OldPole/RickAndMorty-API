@@ -5,7 +5,7 @@ import Notification from '../Notification/Notification';
 
 import imgCloseWhite from 'url:./img/close-white.svg';
 
-import classes from './Character.module.css'
+import classes from './CharacterModal.module.css'
 
 class CharacterModal {
 
@@ -43,7 +43,7 @@ class CharacterModal {
     }
 
     async render (uri) {
-        const data = await getDataApi.getData(uri+'534975');
+        const data = await getDataApi.getData(uri);
         
         if (data) {
             this.renderContent(data);

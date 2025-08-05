@@ -11,6 +11,16 @@ class GetDataApi {
       return false;
     }
   }
+
+  async getGeneralData (url) {
+    try {
+      const response = await axios.get(url);
+      return response.data.info;
+    } catch {
+      console.log(error.message);
+      return false;
+    }  
+  }
 }
 
 export const getDataApi = new GetDataApi();

@@ -1,0 +1,32 @@
+.paginate__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
+    width: 78%;
+    margin: var(--spacing-large) auto;
+    padding: var(--spacing-medium);
+}
+.paginate__item {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aac2e0;
+    background-color: #18283b;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+.paginate__item:hover {
+    color: yellow;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.paginate__item_active,
+.paginate__item_active:hover {
+    background-color: rgb(52, 52, 205);
+    color: #aac2e0;
+    transform: none;
+    cursor: default;
+}
